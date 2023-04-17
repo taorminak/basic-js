@@ -21,7 +21,6 @@ function getSumOfDigits(n) {
     else if (sum >9) { 
       return getSumOfDigits(sum);
     }
-
 }
 
 module.exports = {

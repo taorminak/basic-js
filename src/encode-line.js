@@ -12,12 +12,12 @@ const { NotImplementedError } = require("../extensions/index.js");
  */
 function encodeLine(str) {
   let encodedStr = "";
+  let count = 1;
   for (let i = 0; i < str.length; i++) {
-    let count = 1;
-    if (str[i] === str[i + count]) {
+    if (str[i] === str[i + 1]) {
       count++;
     } else {
-      encodedStr += count + str[i];
+      encodedStr += (count>1? count:"") + str[i];
       count = 1;
     }
   }
